@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exerciceCanvas3</title>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="800">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+      var c=document.getElementById('canvas');
+      var ctx=c.getContext("2d");
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle ='orange';
+      ctx.rotate(0.1);
+      ctx.arc(400,175,15,0,Math.PI*2,true);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();      // Début du chemin
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle ='yellow';
+      ctx.arc(100,175,15,0,Math.PI*2,true);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();      // Début du chemin
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle ='blue';
+      ctx.arc(200,100,15,0,Math.PI*2,true);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle = '#00A552';
+      ctx.fillRect(150,100,200,60);
+      ctx.fillRect(100,150,300,50);
+      ctx.fill();
+      ctx.closePath();      // Fermeture du chemin (facultative)
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle ='#CDCDCD';
+      ctx.arc(135,235,35,0,Math.PI*2,true);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();      // Fermeture du chemin (facultative)
+      ctx.beginPath();      // Début du chemin
+      ctx.fillStyle ='#CDCDCD';
+      ctx.arc(365,235,35,0,Math.PI*2,true);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();      // Fermeture du chemin (facultative)
+      ctx.beginPath();      // Début du chemin
+      ctx.lineWidth="3";
+      ctx.fillStyle ='#CDCDCD';
+      ctx.rotate(-0.1);
+      ctx.bezierCurveTo(60, 287, 380, 255, 500, 400 );
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();      // Début du chemin
+      ctx.lineWidth="3";
+      ctx.fillStyle ='#1E90FF';
+      ctx.bezierCurveTo(490, 390, 495, 390, 500, 401 );
+      ctx.bezierCurveTo(500, 389, 650, 800, 800, 390 );
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
